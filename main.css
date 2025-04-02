@@ -15,8 +15,8 @@
     font-style: normal;
 }
 
-@import{ url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 /* =========================
    색상 변수 설정
 ========================= */
@@ -104,7 +104,7 @@ nav a:hover {
 /* =========================
    공통 섹션 스타일
 ========================= */
-#about, #works , #home, .banner-content, .services-grid, .packages-grid, #contactForm, .checkbox-grid , .service-container , #packages {
+#about, #works , #home, .banner-content, .services-grid, #packages, #contactForm, .checkbox-grid , .service-container  {
     position: relative;
     z-index: 2;
 }
@@ -234,9 +234,7 @@ color: #101010;}
    ABOUT
 ========================= */
 
-#about {
 
-}
 
 .container_about {
     background-color: #EA423E;
@@ -574,7 +572,33 @@ animation
 ========================= */
 @media (max-width: 768px) {
     /* header S */
-   
+    header {
+        padding: 1rem;
+    }
+    
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 1rem; /* 1.5rem에서 1rem으로 간격 더 축소 */
+        justify-content: center; /* 중앙 정렬 추가 */
+        width: 100%; /* max-content 대신 100%로 변경 */
+    }
+
+    nav a {
+        font-size: 0.9rem; /* 1rem에서 0.9rem으로 더 축소 */
+        padding: 0 0.3rem; /* 0.5rem에서 0.3rem으로 패딩 축소 */
+    }
+    .logo {
+        width: 100px;
+        margin-bottom: 1rem;
+    }
+
+    /* header E */
+
     section {
         padding: 4rem 0;
     }
@@ -594,42 +618,6 @@ animation
     h3 {
         font-size: 2rem;
     }
-/*header S*/
-    header {    padding: 1rem;}
-    header .container {
-    
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        width: 100px;
-        margin-bottom: 1rem;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        width: 100%;
-        padding: 0.5rem 0;
-        gap: 1.5rem;
-        justify-content: flex-start;
-    }
-
-    nav ul li {
-        flex: 0 0 auto;
-    }
-
-    nav a {
-        font-size: 1rem;
-        white-space: nowrap;
-        padding: 0 0.5rem;
-    }
- /* header E */
 
 /*cicle s*/
     .circle-wrapper {
@@ -764,6 +752,17 @@ animation
 }
 
 .service-item {
+    width: 100%;
+}
+
+.right-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.right-bottom .service-item {
     width: 100%;
 }
 
